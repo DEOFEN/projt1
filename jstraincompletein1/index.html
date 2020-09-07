@@ -1,0 +1,258 @@
+<html>
+    <head>
+        <title>complete javascript</title>
+        <link rel="stylesheet" type="text/css" href="css/style13.css">
+        <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <script type="text/javascript">
+
+
+        //script for module 2 
+        function fna1()
+           {
+            var x=8;
+            if (x>0)
+            {
+                document.write("positive");
+            }
+            else if(x<0)
+            {
+                document.write("negative");
+            }
+            else{
+                document.write("zero");
+            }}
+
+
+        //script for module 3
+        function fna2()
+           {
+           var day=1;
+            switch(day)
+            {
+                case 1:
+                document.write("sunday");
+                break;
+                case 2:
+                document.write("monday");
+                break;
+                case 3:
+                document.write("tuesday");
+                break;
+                case 4:
+                document.write("wednesday");
+                break;
+                case 5:
+                document.write("thursday");
+                break;
+                case 6:
+                document.write("friday");
+                break;
+                case 7:
+                document.write("saturday");
+                break;
+                default:
+                document.write("wrong input");
+                break;
+            }} 
+
+
+        //script for module 4
+        //print first 5 even numbers
+        function fna3()
+        {
+        for (var x=2 ; x<=10 ; x+=2)
+        {
+            document.write("<h2>"+x+"</h2>");
+        }
+        //print multiplication table of 5
+        document.write("table of 5 ");
+        for (var x=1 ; x<=10 ; x++)
+        {
+            document.write("<h2>"+(5*x)+"</h2>");
+        }} 
+
+
+        //script for module 5
+        //program to print first 5 odd numbers
+        function fna4()
+        {
+        var x=1;
+        while(x<10)
+        {
+        document.write("<h2>"+x+"</h2>");
+        x=x+2;
+        }}
+
+
+        //script for module 6
+        function fna5()
+        {
+            var x=1;
+      do{
+        document.write("<h2>hello</h2>");
+        x--;
+      }
+      while(x>5)
+
+       var x=7;
+       do{
+        document.write("<h2>thanks</h2>");
+        x--;
+       }
+        while(x>5)
+        }
+
+
+         function fna6()
+         {
+             //if we don't want to give values in parameters
+        function addNumber1()   //function declaration
+        {
+            var a=3;
+            var b=2;
+            var total1=a+b;
+            document.write("<h2>total : "+total1+"</h2>");
+        }
+        addNumber1();          //function call
+        addNumber1();          //function call
+        //if we want to give values in parameters when calling
+        function addNumber2(a,b)   //function declaration
+        {
+            var total2=a+b;
+            document.write("<h2>total : "+total2+"</h2>");
+        }
+        addNumber2(2,4);            //function call
+        addNumber2(3,4);            //function call
+        //when function returns a value
+        function addNumber3(a,b)   //function declaration
+        {
+            var total3=a+b;
+            return total3;
+        }
+        var output=addNumber3("hello","world");
+        document.write("<h2>total : "+output+"</h2>");
+         }
+
+
+         function fna7()
+         {
+            var a=5;       //global variable
+            function myFunction()
+            {
+                var b=6;   //local variable
+                document.write("<h2>"+a+"</h2>");
+                document.write("<h2>"+b+"</h2>");
+            }
+            myFunction();
+            document.write("<h2>"+a+"</h2>");
+            document.write("<h2>"+b+"</h2>");        //not printed
+         }
+
+
+         function fna8()
+         {
+            var cars = ["BMW","volvo","audi"];      //array declaration
+        /* other way of array declaration
+        var arr1 = new Array("BMW","volvo","audi")*/
+        document.write("<h2>"+cars+"</h2>");
+            var cars = ["BMW","volvo","audi"];      //array declaration
+            for (var i=0 ; i<3 ; i++)
+            {
+                document.write("<h2>"+cars[i]+"</h2>");
+            }
+            var cars = ["BMW","volvo","audi"];      //array declaration
+            document.write(cars[0])
+            var cars = ["BMW","volvo","audi"];      //array declaration
+            cars.push(2);
+            for (var i=0 ; i<cars.length ; i++)
+            {
+                document.write("<h2>"+cars[i]+"</h2>");
+            }    
+         }
+
+
+        </script>
+
+
+        <!-- 1. module1 -->
+        <h1>1.</h1>
+            <h2>Comments and statements</h2><br>
+        <hr noshade size="5px" color="grey" ><br>
+
+
+        <!-- 2. module2 -->
+        <h1>2.</h1>
+            <h2>if else control statements</h2><br>
+            <button type="button" onclick="fna1()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+
+
+        <!-- 3. module3 -->
+        <h1>3.</h1>
+            <h2>switch case</h2><br>
+            <button type="button" onclick="fna2()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+
+
+        <!-- 4. module4 -->
+        <h1>4.</h1>
+            <h2>for loop</h2><br>
+            <button type="button" onclick="fna3()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+
+
+        <!-- 5. module5 -->
+        <h1>5.</h1>
+            <h2>while loop</h2><br>
+            <button type="button" onclick="fna4()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+
+        
+        <!-- 6. module6 -->
+        <h1>6.</h1>
+            <h2>do while loop</h2><br>
+            <button type="button" onclick="fna5()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+
+
+        <!-- 7. module7 -->
+        <h1>7.</h1>
+            <h2>functions</h2><br>
+            <button type="button" onclick="fna6()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+
+
+        <!-- 8. module8 -->
+        <h1>8.</h1>
+            <h2>scope of variables</h2><br>
+            <button type="button" onclick="fna7()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+
+
+        <!-- 9. module9 -->
+        <h1>9.</h1>
+            <h2>array</h2><br>
+            <button type="button" onclick="fna8()">click me</button>
+        <hr noshade size="5px" color="grey" ><br>
+    </body>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="jqueryui/jquery-ui.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function()
+        {
+    //Script for module 1        
+         //text here is comment...
+            /*text here......
+            ......is comment*/
+            var a=15; //statements are seperated by semicolon
+            var b=6;
+    //script for module 2
+    
+           
+        });
+    </script>
+</html>
